@@ -1,1 +1,222 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Source+Sans+Pro&family=Ubuntu&display=swap");
+@import './include/variables.scss';
+@import './include/global.scss';
+@import './include/typography.scss';
+
 // Sass Template
+
+
+
+// mixins
+@mixin icon-hover{
+    color:$color-gray;
+    transition: 0.2s;
+}
+
+
+html, body{
+    height: 100%;
+}
+
+body{
+    font-family:$font-noto;
+    display: flex;
+    flex-direction: column;
+}
+
+.bg-darkblack{
+    background-color: $color-primary;
+}
+
+.navbar{
+    a{
+        
+        color:$color-secondary;
+        font-weight:bold;
+    }
+
+    &-choices{
+       width:50%;
+    }
+    &-button{
+        border:2px solid $color-red;
+        border-radius: 8px;
+    }
+}
+
+.fa-search:hover{
+    @include icon-hover;
+}
+.fa-shopping-cart:hover{
+    @include icon-hover;
+}
+
+.jumbotron{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url("/assets/IMG_2352.jpg");
+    background-size:cover;
+    padding-bottom:8.5em;
+    padding-top:8.5em;
+
+
+    .container{
+        text-align: center;
+    }
+    h1, p{
+        color:$color-secondary;
+    }
+    &-button{
+        font-weight:bold;
+        border:1px solid $color-secondary;
+        text-decoration: none;
+        color:$color-primary;
+        background-color: $color-secondary;
+        border-radius:5px;
+        padding:12px 42px;
+        box-shadow: 0px 0px 23px 2px rgba(0,0,0,0.75);
+    }
+}
+
+.location-hours-section{
+    &-txt{
+
+        &-col-1{
+
+            p a{
+                color:$color-red;
+                font-size:18px;
+                text-decoration: none;
+            }
+        }
+
+        &-col-2{
+            &-p-1{
+                color:$color-red;
+            }
+        }
+    }
+}
+
+footer{
+    flex-shrink: 0;
+    .row{
+        i{
+            color:$color-red;
+        }
+        p{
+            color:$color-secondary;
+        }
+    }
+}
+
+
+
+ 
+
+.map-responsive{    
+    overflow:hidden;
+    width:580px;
+    position:relative;
+    height:350px;
+}
+
+.map-responsive iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
+ 
+
+
+// refund.html styles
+.refund-section{
+    flex: 1 0 auto;
+    margin:auto;
+    vertical-align:middle;
+    &-text{
+        
+        h3{
+            font-weight:bold;
+            box-sizing: border-box;
+        }
+        p{
+            font-size:1.15em;
+            
+        }
+    }
+}
+
+.skate-camp-section{
+    flex: 1 0 auto;
+    margin:auto;
+    
+    &-txt{
+        p {
+           font-size:22px;
+            strong{
+                color:$color-red;
+            }
+        }
+        ul{
+            li{
+                font-size:20px;
+            }
+        }
+        
+    }
+}
+
+.center-block {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+ }
+
+
+//  product sections styles
+.product-section{
+    flex: 1 0 auto;
+    margin:auto;
+
+    &-col-1{
+        
+        img{
+            overflow: hidden;
+        }
+    }
+    &-col-2{
+        &-head-group{
+            
+        }
+    }
+    .form-group{
+        border-top: 1px solid $color-gray;
+        
+
+        .form-check{
+            strong{
+                font-size:18px;
+                
+            }
+        }
+        .store-pickup{
+            border-bottom: 1px solid $color-gray;
+        }
+        .quantity-selector{
+            input{
+                width:50px;
+                font-size:18px;
+                outline:none;
+            }
+        }
+    }
+    
+
+    
+}
+
+.border-line{
+    border-top:1px solid $color-gray;
+}
+
